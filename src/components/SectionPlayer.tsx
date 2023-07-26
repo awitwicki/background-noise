@@ -24,13 +24,19 @@ class SectionPlayer extends Component {
 
   render() {
     const { playerName, icon, soundPath } = this.props;
+    // Define CSS classes based on the isPlaying state
+    const cardClass = this.state.isPlaying ? 'playing' : '';
 
     return (
-      <div
+      <div class={`flex flex-row border rounded-lg px-5 ${cardClass}`}
         onClick={this.handleClick}
         style={{ cursor: 'pointer' }}>
-        <div>{icon}</div>
-        <p>{playerName}</p>
+        <div class="flex flex-col justify-center">
+          {icon}
+        </div>
+        <div class="pl-2">
+          <p class="font-bold">{playerName}</p>
+        </div>
       </div>
     );
   }

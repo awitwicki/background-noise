@@ -3,7 +3,7 @@ import { FaCloudRain, FaCity } from 'react-icons/fa';
 
 export default function () {
   return (
-  <div>
+  <div class="flex flex-col gap-5">
     <SectionPlayer
       playerName='Rain'
       icon={<FaCloudRain />}
