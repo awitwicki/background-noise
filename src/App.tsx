@@ -1,5 +1,6 @@
 import { Suspense } from 'preact/compat'
 import UserCount from 'components/UserCount'
+import RainPlayer from 'components/RainPlayer'
 
 export default function () {
   return (
@@ -7,6 +8,7 @@ export default function () {
       <h1>Frontend template</h1>
       <Suspense fallback={<p>Loading...</p>}>
         <UserCount />
+        <RainPlayer />
       </Suspense>
     </div>
   )
