@@ -23,13 +23,13 @@ class SectionPlayer extends Component {
   };
 
   render() {
-    const { playerName, iconPath, soundPath } = this.props;
+    const { playerName, icon, soundPath } = this.props;
 
     return (
       <div
         onClick={this.handleClick}
         style={{ cursor: 'pointer' }}>
-        <img src={iconPath} alt="Rain Icon" />
+        <div>{icon}</div>
         <p>{playerName}</p>
       </div>
     );

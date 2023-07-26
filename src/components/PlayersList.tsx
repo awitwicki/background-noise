@@ -1,15 +1,16 @@
 import SectionPlayer from 'components/SectionPlayer'
+import { FaCloudRain, FaCity } from 'react-icons/fa';
 
 export default function () {
   return (
   <div>
     <SectionPlayer
       playerName='Rain'
-      iconPath='/path/to/your/rain.png'
-      soundPath='/public/sounds/rain.ogg' />
+      icon={<FaCloudRain />}
+      soundPath='/sounds/rain.ogg' />
     <SectionPlayer
       playerName='City'
-      iconPath='/path/to/your/city.png'
-      soundPath='/public/sounds/city.ogg' />
+      icon={<FaCity />}
+      soundPath='/sounds/city.ogg' />
   </div>)
 }
