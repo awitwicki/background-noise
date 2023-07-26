@@ -1,7 +1,9 @@
-import { Component, render } from 'preact';
+import { Component } from 'preact';
+import { SectionPlayerProps } from './SectionPlayerProps';
+import { SectionPlayerState } from "../models/SectionPlayerState"
 
-class SectionPlayer extends Component {
-  constructor(props) {
+class SectionPlayer extends Component<SectionPlayerProps, SectionPlayerState> {
+  constructor(props: SectionPlayerProps) {
     super(props);
     this.state = {
       isPlaying: false,
@@ -23,8 +25,6 @@ class SectionPlayer extends Component {
   };
 
   render() {
-    const { playerName, icon, soundPath } = this.props;
-    // Define CSS classes based on the isPlaying state
     const cardClass = this.state.isPlaying ? 'playing' : '';
 
     return (
@@ -32,10 +32,10 @@ class SectionPlayer extends Component {
         onClick={this.handleClick}
         style={{ cursor: 'pointer' }}>
         <div class="flex flex-col justify-center">
-          {icon}
+          {this.props.icon}
         </div>
         <div class="pl-2">
-          <p class="font-bold">{playerName}</p>
+          <p class="font-bold">{this.props.playerName}</p>
         </div>
       </div>
     );

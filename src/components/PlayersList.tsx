@@ -1,5 +1,5 @@
 import SectionPlayer from 'components/SectionPlayer'
-import { FaCloudRain, FaCity } from 'react-icons/fa';
+import { FaCloudRain, FaCity, FaKiwiBird, FaShip, FaCoffee } from 'react-icons/fa';
 
 export default function () {
   return (
@@ -12,5 +12,17 @@ export default function () {
       playerName='City'
       icon={<FaCity />}
       soundPath='/sounds/city.ogg' />
+    <SectionPlayer
+      playerName='Birds'
+      icon={<FaKiwiBird />}
+      soundPath='/sounds/birds.ogg' />
+    <SectionPlayer
+      playerName='Boat'
+      icon={<FaShip />}
+      soundPath='/sounds/boat.ogg' />
+    <SectionPlayer
+      playerName='Coffee shop'
+      icon={<FaCoffee />}
+      soundPath='/sounds/coffee-shop.ogg' />
   </div>)
 }
