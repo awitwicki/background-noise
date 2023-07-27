@@ -1,6 +1,7 @@
 import { Component } from 'preact'
-import { SectionPlayerProps } from './SectionPlayerProps';
-import { SectionPlayerState } from "../models/SectionPlayerState"
+import { IconContext } from 'react-icons'
+import { SectionPlayerProps } from './SectionPlayerProps'
+import { SectionPlayerState } from '../models/SectionPlayerState'
 
 class SectionPlayer extends Component<SectionPlayerProps, SectionPlayerState> {
   constructor(props: SectionPlayerProps) {
