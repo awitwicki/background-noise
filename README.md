@@ -1,6 +1,6 @@
-# Frontend code template in `preact`
+# Chill
 
-This template is to be used for frontend applications.
+This app allows you to listen relaxing sounds
 
 ## Features
 
@@ -17,5 +17,6 @@ This template is to be used for frontend applications.
 
 ## Local launch
 
-1. Install dependencies with `yarn`
-2. Run the server with `yarn start`
+1. Install vite with `yarn add vite`
+2. Install dependencies with `yarn`
+3. Run the server with `yarn start`

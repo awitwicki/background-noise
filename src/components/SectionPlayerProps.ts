@@ -1,7 +1,7 @@
-import { JSX } from 'preact';
+import { JSX } from 'preact'
 
 export interface SectionPlayerProps {
-  playerName: string;
-  icon: JSX.Element;
-  soundPath: string;
+  playerName: string
+  icon: JSX.Element
+  soundPath: string
 }

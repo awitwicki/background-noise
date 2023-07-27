@@ -9,6 +9,7 @@ body {
 }
 
 .playing {
+  color: white;
   background-color: #0046ff08;
   box-shadow: 0 0 10px lightblue;
 }
