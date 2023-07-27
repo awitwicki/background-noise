@@ -11,16 +11,16 @@ import {
 } from 'react-icons/fa'
 import SectionPlayer from 'components/SectionPlayer'
 
-import soundBirds from '/sounds/birds.ogg'
-import soundCity from '/sounds/city.ogg'
-import soundCoffee from '/sounds/coffee-shop.ogg'
-import soundFireplace from '/sounds/fireplace.ogg'
-import soundNight from '/sounds/summer-night.ogg'
-import soundPinkNoice from '/sounds/pink-noise.ogg'
-import soundRain from '/sounds/rain.ogg'
-import soundStorm from '/sounds/storm.ogg'
-import soundWaves from '/sounds/waves.ogg'
-import soundWhiteNoice from '/sounds/white-noise.ogg'
+import soundBirds from '/sounds/birds.mp3'
+import soundCity from '/sounds/city.mp3'
+import soundCoffee from '/sounds/coffee-shop.mp3'
+import soundFireplace from '/sounds/fireplace.mp3'
+import soundNight from '/sounds/summer-night.mp3'
+import soundPinkNoice from '/sounds/pink-noise.mp3'
+import soundRain from '/sounds/rain.mp3'
+import soundStorm from '/sounds/storm.mp3'
+import soundWaves from '/sounds/waves.mp3'
+import soundWhiteNoice from '/sounds/white-noise.mp3'
 
 export default function () {
   return (
