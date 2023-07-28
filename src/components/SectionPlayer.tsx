@@ -1,14 +1,45 @@
 import { Component } from 'preact'
 import { IconContext } from 'react-icons'
-import { SectionPlayerProps } from './SectionPlayerProps'
-import { SectionPlayerState } from '../models/SectionPlayerState'
+import { SectionPlayerProps } from 'components/SectionPlayerProps'
+import { SectionPlayerState } from 'models/SectionPlayerState'
 
 class SectionPlayer extends Component<SectionPlayerProps, SectionPlayerState> {
+  private fadeIntervalId: number | null = null
+  private fadeStep = 0.02
+  private fadeDuration = 500 // Milliseconds for the fade-in and fade-out effect
+
   constructor(props: SectionPlayerProps) {
     super(props)
     this.state = {
       isPlaying: false,
       audio: new Audio(this.props.soundPath),
+    }
+  }
+
+  handleFadeIn = () => {
+    const { audio } = this.state
+
+    audio.volume += this.fadeStep
+
+    if (audio.volume < 1) {
+      this.fadeIntervalId = requestAnimationFrame(this.handleFadeIn)
+    } else {
+      audio.volume = 1.0
+      this.fadeIntervalId = null
+    }
+  }
+
+  handleFadeOut = () => {
+    const { audio } = this.state
+
+    audio.volume -= this.fadeStep
+
+    if (audio.volume > 0) {
+      this.fadeIntervalId = requestAnimationFrame(this.handleFadeOut)
+    } else {
+      audio.pause()
+      audio.volume = 1.0
+      this.fadeIntervalId = null
     }
   }
 
@@ -18,11 +49,29 @@ class SectionPlayer extends Component<SectionPlayerProps, SectionPlayerState> {
     if (!isPlaying) {
       this.setState({ isPlaying: true })
       audio.loop = true
+
+      if (this.fadeIntervalId !== null) {
+        cancelAnimationFrame(this.fadeIntervalId)
+      }
+
+      audio.volume = 0 // Start with zero volume for fade-in
       audio.play()
+
+      this.fadeIntervalId = requestAnimationFrame(this.handleFadeIn)
     } else {
       this.setState({ isPlaying: false })
-      audio.pause()
+
+      if (this.fadeIntervalId !== null) {
+        cancelAnimationFrame(this.fadeIntervalId)
+      }
+
+      this.fadeIntervalId = requestAnimationFrame(this.handleFadeOut)
     }
+  }
+
+  componentWillUnmount() {
+    const { audio } = this.state
+    audio.pause() // Pause the audio when the component unmounts
   }
 
   render() {
