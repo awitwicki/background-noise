@@ -9,7 +9,11 @@ body {
 }
 
 .playing {
-  color: white;
-  background-color: #0046ff08;
-  box-shadow: 0 0 10px lightblue;
+  @apply bg-blue-500 border-blue-500 text-white font-bold shadow-md;
+}
+
+.player:hover {
+  @apply border-blue-500;
+  --box-shadow-color: theme('colors.blue.500');
+  box-shadow: 0 0 10px var(--box-shadow-color);
 }

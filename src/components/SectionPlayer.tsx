@@ -30,7 +30,7 @@ class SectionPlayer extends Component<SectionPlayerProps, SectionPlayerState> {
 
     return (
       <div
-        class={`flex flex-row border rounded-lg px-5 ${cardClass}`}
+        class={`flex flex-row border rounded-lg px-5 player ${cardClass}`}
         onClick={this.handleClick}
         style={{ cursor: 'pointer' }}
       >
