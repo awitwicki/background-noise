@@ -19,7 +19,7 @@ class SectionPlayer extends Component<SectionPlayerProps, SectionPlayerState> {
   handleFadeIn = () => {
     const { audio } = this.state
 
-    audio.volume += this.fadeStep
+    audio.volume = Math.min(1, audio.volume + this.fadeStep)
 
     if (audio.volume < 1) {
       this.fadeIntervalId = requestAnimationFrame(this.handleFadeIn)
@@ -32,7 +32,7 @@ class SectionPlayer extends Component<SectionPlayerProps, SectionPlayerState> {
   handleFadeOut = () => {
     const { audio } = this.state
 
-    audio.volume -= this.fadeStep
+    audio.volume = Math.max(0, audio.volume - this.fadeStep)
 
     if (audio.volume > 0) {
       this.fadeIntervalId = requestAnimationFrame(this.handleFadeOut)
