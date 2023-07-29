@@ -1,11 +1,17 @@
 # Chill
 
-This app allows you to listen relaxing sounds
+This app allows you inspire focusing by listening relaxing sounds
+
+Inspired by [blanket](https://github.com/rafaelmardojai/blanket)
+
+<p align="center">
+  <img src="img.jpg"/>
+</p>
 
 ## Features
 
 - State management with `jotai`
-- Around 13.53kb after brotli compression (this includes **everything**) 😱
+- Around 16kb after brotli compression
 - `preact` under the hood with `preact/compat` makes it compatible with virtually any `react` library but still makes it faster
 - Full TypeScript support — no dangling types
 - `vite` packager and devtools make building and development lightning fast
