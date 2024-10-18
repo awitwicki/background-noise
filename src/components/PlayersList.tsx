@@ -8,6 +8,7 @@ import {
   FaMoon,
   FaWater,
   FaWaveSquare,
+  FaMusic
 } from 'react-icons/fa'
 import SectionPlayer from 'components/SectionPlayer'
 
@@ -21,6 +22,7 @@ import soundRain from '/sounds/rain.mp3'
 import soundStorm from '/sounds/storm.mp3'
 import soundWaves from '/sounds/waves.mp3'
 import soundWhiteNoice from '/sounds/white-noise.mp3'
+import soundLofi from '/sounds/lofi-beats.mp3'
 
 export default function () {
   return (
@@ -74,6 +76,11 @@ export default function () {
         playerName="Pink noise"
         icon={<FaWaveSquare />}
         soundPath={soundPinkNoice}
+      />
+      <SectionPlayer
+        playerName="Lo-fi"
+        icon={<FaMusic />}
+        soundPath={soundLofi}
       />
     </div>
   )
