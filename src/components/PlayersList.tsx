@@ -8,7 +8,7 @@ import {
   FaMoon,
   FaWater,
   FaWaveSquare,
-  FaMusic
+  FaMusic,
 } from 'react-icons/fa'
 import SectionPlayer from 'components/SectionPlayer'
 
@@ -26,62 +26,64 @@ import soundLofi from '/sounds/lofi-beats.mp3'
 
 export default function () {
   return (
-    <div class="flex flex-col gap-5">
-      <SectionPlayer
-        playerName="Rain"
-        icon={<FaCloudRain />}
-        soundPath={soundRain}
-      />
-      <SectionPlayer
-        playerName="Storm"
-        icon={<FaBolt />}
-        soundPath={soundStorm}
-      />
-      <SectionPlayer
-        playerName="Night"
-        icon={<FaMoon />}
-        soundPath={soundNight}
-      />
-      <SectionPlayer
-        playerName="Fire"
-        icon={<FaFire />}
-        soundPath={soundFireplace}
-      />
-      <SectionPlayer
-        playerName="City"
-        icon={<FaCity />}
-        soundPath={soundCity}
-      />
-      <SectionPlayer
-        playerName="Birds"
-        icon={<FaCrow />}
-        soundPath={soundBirds}
-      />
-      <SectionPlayer
-        playerName="Ocean"
-        icon={<FaWater />}
-        soundPath={soundWaves}
-      />
-      <SectionPlayer
-        playerName="Coffee shop"
-        icon={<FaCoffee />}
-        soundPath={soundCoffee}
-      />
-      <SectionPlayer
-        playerName="White noise"
-        icon={<FaWaveSquare />}
-        soundPath={soundWhiteNoice}
-      />
-      <SectionPlayer
-        playerName="Pink noise"
-        icon={<FaWaveSquare />}
-        soundPath={soundPinkNoice}
-      />
-      <SectionPlayer
-        playerName="Lo-fi"
-        icon={<FaMusic />}
-        soundPath={soundLofi}
-      />
+    <div class="space-y-4">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <SectionPlayer
+          playerName="Rain"
+          icon={<FaCloudRain />}
+          soundPath={soundRain}
+        />
+        <SectionPlayer
+          playerName="Storm"
+          icon={<FaBolt />}
+          soundPath={soundStorm}
+        />
+        <SectionPlayer
+          playerName="Night"
+          icon={<FaMoon />}
+          soundPath={soundNight}
+        />
+        <SectionPlayer
+          playerName="Fire"
+          icon={<FaFire />}
+          soundPath={soundFireplace}
+        />
+        <SectionPlayer
+          playerName="City"
+          icon={<FaCity />}
+          soundPath={soundCity}
+        />
+        <SectionPlayer
+          playerName="Birds"
+          icon={<FaCrow />}
+          soundPath={soundBirds}
+        />
+        <SectionPlayer
+          playerName="Ocean"
+          icon={<FaWater />}
+          soundPath={soundWaves}
+        />
+        <SectionPlayer
+          playerName="Coffee shop"
+          icon={<FaCoffee />}
+          soundPath={soundCoffee}
+        />
+        <SectionPlayer
+          playerName="White noise"
+          icon={<FaWaveSquare />}
+          soundPath={soundWhiteNoice}
+        />
+        <SectionPlayer
+          playerName="Pink noise"
+          icon={<FaWaveSquare />}
+          soundPath={soundPinkNoice}
+        />
+        <SectionPlayer
+          playerName="Lo-fi"
+          icon={<FaMusic />}
+          soundPath={soundLofi}
+        />
+      </div>
     </div>
   )
 }
